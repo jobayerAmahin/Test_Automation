@@ -9,5 +9,5 @@ retry
     maximize browser window
     input text    xpath://input[@id='input']    Amazon
     press keys    xpath://input[@id='input']    ENTER
-    close browser
+    close all browsers
 *** Keywords ***
