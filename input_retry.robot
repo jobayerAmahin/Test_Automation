@@ -5,9 +5,11 @@ ${url}  https://google.com/
 ${browser}  chrome
 *** Test Cases ***
 retry
-    open browser    ${url}      ${browser}
-    maximize browser window
+    launchBrowser
     input text    xpath://input[@id='input']    Amazon
     press keys    xpath://input[@id='input']    ENTER
     close all browsers
 *** Keywords ***
+launchBrowser
+    open browser    ${url}      ${browser}
+    maximize browser window
