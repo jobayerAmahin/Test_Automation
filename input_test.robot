@@ -5,8 +5,7 @@ ${browser}  chrome
 ${url}  https://www.saucedemo.com/
 *** Test Cases ***
 VerifyLoginPage
-    open browser    ${url}  ${browser}
-    maximize browser window
+    launchBrowser
     ${"UserName"}  set variable    xpath://input[@id='user-name']
     input text  ${"UserName"}  problem_user
     press keys    xpath://input[@id='user-name']   TAB
@@ -18,3 +17,6 @@ VerifyLoginPage
     close browser
     #click button    xpath://html/body/ntp-app//div/div[2]/ntp-realbox//div/cr-realbox-dropdown//div/div/div/cr-realbox-match[1]//div[1]/cr-realbox-icon//div/div[2]
 *** Keywords ***
+launchBrowser
+    open browser    ${url}  ${browser}
+    maximize browser window
